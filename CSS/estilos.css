@@ -1,0 +1,88 @@
+/* Estilos generales*/
+body {/*Estilos del cuerpo de la pagina*/
+    font-family: Arial, sans-serif;/*Fuente de la letra*/
+    background: linear-gradient(to right, #d32e5e, #2a4c87);/*Degradado de colores de fondo*/
+    color: white;/*Color de la letra*/
+    margin: 0;/*Margen de 0*/
+    padding: 0;/*Espaciado de 0*/
+}
+
+header {/*Estilos del encabezado*/
+    background: #1e1e1e;/*Color de fondo*/
+    padding: 15px;/*Espaciado interno de 15px*/
+    text-align: center;/*Alineacion del texto al centro*/
+}
+
+h1 {/*Estilos del titulo principal*/
+    font-size: 24px;/*Tamaño de la letra*/
+    margin: 0;/*Margen de 0*/
+}
+
+nav {/*Estilos del menu de navegacion*/
+    display: flex;/*Mostrar en forma de flexbox*/
+    justify-content: center;/*Alineacion al centro*/
+    margin-top: 10px;/*Margen superior de 10px*/
+}
+
+nav #nav a {/*Estilos de los enlaces del menu*/
+    color: white;/*Color de la letra*/
+    text-decoration: none;/*Sin subrayado*/
+    margin: 0 15px;/*Margen de 0 arriba y abajo y 15 a los lados*/
+    font-weight: bold;/*Negrita*/
+}
+
+
+/* Sección de formularios */
+main {/*Estilos de la seccion principal*/
+    display: flex;/*Mostrar en forma de flexbox*/
+    justify-content: center;/*Alineacion de los formularios al centro*/
+    padding: 20px;/*Espaciado interno de 20px*/
+}
+
+#formularios1, #formularios2 {/*Estilos de los formularios*/
+    background: #222;/*Color de fondo*/
+    padding: 20px;/*Espaciado interno de 20px*/
+    border-radius: 10px;/*Borde redondeado*/
+    width: 40%;/*Ancho del 40%*/
+    margin: 10px;/*Margen de 10px*/
+}
+
+form p, label {/*Estilos de los parrafos y etiquetas*/
+    font-size: 14px;/*Tamaño de la letra*/
+    margin: 10px 0;/*Espaciado de 10px arriba y abajo*/
+}
+
+select, input {/*Estilos de los inputs y selects*/
+    width: 100%;/*Ancho del 100%*/
+    padding: 10px;/*Espaciado interno de 10px*/
+    margin-top: 5px;/*Espaciado superior de 5px*/
+    border-radius: 5px;/*Borde redondeado*/
+    border: none;/*Sin borde*/
+    background: #333;/*Color de fondo*/
+    color: white;/*Color de la letra*/
+}
+
+button {/*Estilos del boton*/
+    background: #d32e5e;/*Color de fondo del boton*/
+    color: white;/*Color de la letra*/
+    border: none;/*Sin borde*/
+    padding: 10px 15px;/*Espaciado interno de 10px arriba y abajo y 15px a los lados*/
+    font-size: 16px;/*Tamaño de la letra*/
+    border-radius: 5px;/*Borde redondeado*/
+    cursor: pointer;/*Cursor de la mano al pasar el cursor por encima*/
+}
+
+button:hover {/*Estilo al pasar el cursor por encima del boton*/
+    background: #b1254d;/*Color de fondo al pasar el cursor por encima*/
+}
+
+
+/* Pie de página */
+footer {/*Estilos del pie de pagina*/
+    text-align: center;/*Alineacion del texto al centro*/
+    padding: 10px;/*Espaciado interno de 10px*/
+    background: #1e1e1e;/*Color de fondo*/
+    position: absolute;/*Posicion fija*/
+    bottom: 0;/*Alineacion al final de la pagina*/
+    width: 100%;/*Ancho del 100%*/
+}

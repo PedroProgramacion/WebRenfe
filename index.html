@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./CSS/estilos.css">
+    <title>Formulario Renfe</title>
+</head>
+<body>
+
+    <header>
+        <h1>RENFE</h1>
+        <nav>
+            <section id="nav">
+                <a href="#">Trenes al mejor precio</a>
+                <a href="#">Renfe Viajes</a>
+            </section>
+        </nav>
+    </header>
+
+    <main>
+        <section id="formularios1">
+            <form action="index.php" method="get">
+                <p>Seleccione su origen:</p>
+                <select name="origen" id="origen" required>
+                    <option value="albacete">Albacete</option>
+                    <option value="ciudad_real">Ciudad Real</option>
+                    <option value="cuenca">Cuenca</option>
+                    <option value="guadalajara">Guadalajara</option>
+                    <option value="toledo">Toledo</option>
+                    <option value="tomelloso">Tomelloso</option>
+                </select>
+
+                <p>Seleccione su destino:</p>
+                <select name="destino" id="destino" required>
+                    <option value="albacete">Albacete</option>
+                    <option value="ciudad_real">Ciudad Real</option>
+                    <option value="cuenca">Cuenca</option>
+                    <option value="guadalajara">Guadalajara</option>
+                    <option value="toledo">Toledo</option>
+                    <option value="tomelloso">Tomelloso</option>
+                </select>
+
+                <p>
+                    <label for="fecha_ida">Fecha de ida:</label><br>
+                    <input type="date" id="fecha_ida" name="fecha_ida" required>
+                </p>
+
+                <p>
+                    <label for="fecha_vuelta">Fecha de vuelta:</label><br>
+                    <input type="date" id="fecha_vuelta" name="fecha_vuelta" required>
+                </p>
+
+                <p>
+                    <label for="pasajeros">Pasajeros-Adultos:</label><br>
+                    <input type="number" id="pasajeros" name="pasajeros" min="1" max="10" step="1" required>
+                </p>
+
+                <p>
+                    <label for="text">Pasajeros-Nin@s:</label>
+                    <input type="number" id="ninos" name="ninos" min="0" max="10" step="1">
+                </p>
+
+                <p><button type="submit">Buscar billete</button></p>
+            </form>
+        </section>
+
+        <section id="formularios2">
+            <p>Preferencias de viaje</p>
+            
+            <p>
+                <label for="preferencias">Viaje sin enlace</label>
+                <input type="radio" name="preferencias" id="preferencias">
+            </p>
+
+            <p>Viaje accesible</p>
+            <p>
+                <label for="plaza_h">Plaza H disponible</label>
+                <input type="radio" name="accesible" id="plaza_h" value="plaza_h">
+                <label for="asistencia">Necesito asistencia</label>
+                <input type="radio" name="accesible" id="asistencia" value="asistencia">
+            </p>
+            
+            <p>Franja horaria</p>
+            <p>
+                <label for="ida">Viaje de ida</label>
+                <input type="radio" name="viaje1" id="ida" value="ida">
+            </p>
+
+            <p>
+                <label for="hora_ida">Hora de ida:</label>
+                <input type="time" id="hora_ida" name="hora_ida" required>
+            </p>
+
+            <p>Viaje de ida<strong> Salida a partir de las 00:00h</strong></p>
+
+            <p>
+                <label for="vuelta">Viaje de vuelta</label>
+                <input type="radio" name="viaje2" id="vuelta" value="vuelta">
+            </p>
+
+            
+
+            <p>
+                <label for="hora_vuelta">Hora de vuelta:</label>
+                <input type="time" id="hora_vuelta" name="hora_vuelta" required>
+            </p>
+
+            <p>Viaje de vuelta<strong> Salida a partir de las 00:00h</strong></p>
+
+        </section>
+    </main>
+    <aside>
+
+    </aside>
+
+    <footer>
+        <p><h6>&copy; 2025 Renfe - Todos los derechos reservados</h6></p>
+    </footer>
+
+</body>
+</html>
