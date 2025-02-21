@@ -60,14 +60,18 @@
                     <label for="text">Pasajeros-Nin@s:</label>
                     <input type="number" id="ninos" name="ninos" min="0" max="10" step="1">
                 </p>
-
+                <p>
+                    <label for="text">Pasajeros-Bebes:</label>
+                    <input type="number" id="bebes" name="bebes" min="0" max="10" step="1">
+                </p>
+                
                 <p><button type="submit">Buscar billete</button></p>
             </form>
         </section>
 
         <section id="formularios2">
             <p>Preferencias de viaje</p>
-            
+
             <p>
                 <label for="preferencias">Viaje sin enlace</label>
                 <input type="radio" name="preferencias" id="preferencias">
@@ -77,6 +81,9 @@
             <p>
                 <label for="plaza_h">Plaza H disponible</label>
                 <input type="radio" name="accesible" id="plaza_h" value="plaza_h">
+            </p>
+
+            <p>
                 <label for="asistencia">Necesito asistencia</label>
                 <input type="radio" name="accesible" id="asistencia" value="asistencia">
             </p>
