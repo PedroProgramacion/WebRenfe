@@ -65,56 +65,58 @@
                     <input type="number" id="bebes" name="bebes" min="0" max="10" step="1">
                 </p>
                 
+              
+
+                <p>Preferencias de viaje</p>
+
+                <p>
+                    <label for="preferencias">Viaje sin enlace</label>
+                    <input type="checkbox" name="preferencias" id="preferencias">
+                </p>
+    
+                <p>Viaje accesible</p>
+                <p>
+                    <label for="plaza_h">Plaza H disponible</label>
+                    <input type="checkbox" name="accesible" id="plaza_h" value="plaza_h">
+                </p>
+    
+                <p>
+                    <label for="asistencia">Necesito asistencia</label>
+                    <input type="checkbox" name="accesible" id="asistencia" value="asistencia">
+                </p>
+                
+                <p>Franja horaria</p>
+                <p>
+                    <label for="ida">Viaje de ida</label>
+                    <input type="checkbox" name="viaje1" id="ida" value="ida">
+                </p>
+    
+                <p>
+                    <label for="hora_ida">Hora de ida:</label>
+                    <input type="time" id="hora_ida" name="hora_ida" required>
+                </p>
+    
+                <p>Viaje de ida<strong> Salida a partir de las 00:00h</strong></p>
+    
+                <p>
+                    <label for="vuelta">Viaje de vuelta</label>
+                    <input type="checkbox" name="viaje2" id="vuelta" value="vuelta">
+                </p>
+    
+                
+    
+                <p>
+                    <label for="hora_vuelta">Hora de vuelta:</label>
+                    <input type="time" id="hora_vuelta" name="hora_vuelta" required>
+                </p>
+    
+                <p>Viaje de vuelta<strong> Salida a partir de las 00:00h</strong></p><br>
                 <p><button type="submit">Buscar billete</button></p>
+    
             </form>
         </section>
 
-        <section id="formularios2">
-            <p>Preferencias de viaje</p>
-
-            <p>
-                <label for="preferencias">Viaje sin enlace</label>
-                <input type="radio" name="preferencias" id="preferencias">
-            </p>
-
-            <p>Viaje accesible</p>
-            <p>
-                <label for="plaza_h">Plaza H disponible</label>
-                <input type="radio" name="accesible" id="plaza_h" value="plaza_h">
-            </p>
-
-            <p>
-                <label for="asistencia">Necesito asistencia</label>
-                <input type="radio" name="accesible" id="asistencia" value="asistencia">
-            </p>
-            
-            <p>Franja horaria</p>
-            <p>
-                <label for="ida">Viaje de ida</label>
-                <input type="radio" name="viaje1" id="ida" value="ida">
-            </p>
-
-            <p>
-                <label for="hora_ida">Hora de ida:</label>
-                <input type="time" id="hora_ida" name="hora_ida" required>
-            </p>
-
-            <p>Viaje de ida<strong> Salida a partir de las 00:00h</strong></p>
-
-            <p>
-                <label for="vuelta">Viaje de vuelta</label>
-                <input type="radio" name="viaje2" id="vuelta" value="vuelta">
-            </p>
-
-            
-
-            <p>
-                <label for="hora_vuelta">Hora de vuelta:</label>
-                <input type="time" id="hora_vuelta" name="hora_vuelta" required>
-            </p>
-
-            <p>Viaje de vuelta<strong> Salida a partir de las 00:00h</strong></p>
-
+           
         </section>
     </main>
     <aside>
