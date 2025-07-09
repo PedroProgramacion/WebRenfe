@@ -3,129 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Reserva tus billetes de tren con Renfe al mejor precio">
     <link rel="stylesheet" type="text/css" href="./CSS/estilos.css">
-    <title>Formulario Renfe</title>
+    <title>Reserva de Billetes | Renfe</title>
 </head>
 <body>
-
-    <header>
-        <h1>RENFE</h1>
-        <nav>
-            <section id="nav">
-                <a href="#">Trenes al mejor precio</a>
-                <a href="#">Renfe Viajes</a>
-            </section>
-        </nav>
+    <header class="main-header">
+        <div class="header-content">
+            <h1 class="logo">RENFE</h1>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="#" class="nav-link">Trenes al mejor precio</a></li>
+                    <li><a href="#" class="nav-link">Renfe Viajes</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <section id="formularios1">
-            <form action="index.php" method="get">
-                <p>Seleccione su origen:</p>
-                <select name="origen" id="origen" required>
-                    <option value="albacete">Albacete</option>
-                    <option value="ciudad_real">Ciudad Real</option>
-                    <option value="cuenca">Cuenca</option>
-                    <option value="guadalajara">Guadalajara</option>
-                    <option value="toledo">Toledo</option>
-                    <option value="tomelloso">Tomelloso</option>
-                </select>
+    <main class="main-content">
+        <section class="booking-section">
+            <h2 class="section-title">Reserva tu billete</h2>
+            <form action="index.php" method="get" class="booking-form">
+                <div class="form-group">
+                    <label for="origen" class="form-label">Seleccione su origen:</label>
+                    <select name="origen" id="origen" class="form-select" required>
+                        <option value="" disabled selected>-- Seleccione --</option>
+                        <option value="albacete">Albacete</option>
+                        <option value="ciudad_real">Ciudad Real</option>
+                        <option value="cuenca">Cuenca</option>
+                        <option value="guadalajara">Guadalajara</option>
+                        <option value="toledo">Toledo</option>
+                        <option value="tomelloso">Tomelloso</option>
+                    </select>
+                </div>
 
-                <p>Seleccione su destino:</p>
-                <select name="destino" id="destino" required>
-                    <option value="albacete">Albacete</option>
-                    <option value="ciudad_real">Ciudad Real</option>
-                    <option value="cuenca">Cuenca</option>
-                    <option value="guadalajara">Guadalajara</option>
-                    <option value="toledo">Toledo</option>
-                    <option value="tomelloso">Tomelloso</option>
-                </select>
+                <div class="form-group">
+                    <label for="destino" class="form-label">Seleccione su destino:</label>
+                    <select name="destino" id="destino" class="form-select" required>
+                        <option value="" disabled selected>-- Seleccione --</option>
+                        <option value="albacete">Albacete</option>
+                        <option value="ciudad_real">Ciudad Real</option>
+                        <option value="cuenca">Cuenca</option>
+                        <option value="guadalajara">Guadalajara</option>
+                        <option value="toledo">Toledo</option>
+                        <option value="tomelloso">Tomelloso</option>
+                    </select>
+                </div>
 
-                <p>
-                    <label for="fecha_ida">Fecha de ida:</label><br>
-                    <input type="date" id="fecha_ida" name="fecha_ida" required>
-                </p>
+                <div class="form-row">
+                    <div class="form-group half-width">
+                        <label for="fecha_ida" class="form-label">Fecha de ida:</label>
+                        <input type="date" id="fecha_ida" name="fecha_ida" class="form-input" required>
+                    </div>
+                    <div class="form-group half-width">
+                        <label for="fecha_vuelta" class="form-label">Fecha de vuelta:</label>
+                        <input type="date" id="fecha_vuelta" name="fecha_vuelta" class="form-input" required>
+                    </div>
+                </div>
 
-                <p>
-                    <label for="fecha_vuelta">Fecha de vuelta:</label><br>
-                    <input type="date" id="fecha_vuelta" name="fecha_vuelta" required>
-                </p>
+                <div class="form-row">
+                    <div class="form-group third-width">
+                        <label for="pasajeros" class="form-label">Adultos:</label>
+                        <input type="number" id="pasajeros" name="pasajeros" min="1" max="10" step="1" class="form-input" required>
+                    </div>
+                    <div class="form-group third-width">
+                        <label for="ninos" class="form-label">Niños:</label>
+                        <input type="number" id="ninos" name="ninos" min="0" max="10" step="1" class="form-input">
+                    </div>
+                    <div class="form-group third-width">
+                        <label for="bebes" class="form-label">Bebés:</label>
+                        <input type="number" id="bebes" name="bebes" min="0" max="10" step="1" class="form-input">
+                    </div>
+                </div>
 
-                <p>
-                    <label for="pasajeros">Pasajeros-Adultos:</label><br>
-                    <input type="number" id="pasajeros" name="pasajeros" min="1" max="10" step="1" required>
-                </p>
+                <fieldset class="form-fieldset">
+                    <legend class="fieldset-legend">Preferencias de viaje</legend>
+                    <div class="checkbox-group">
+                        <input type="checkbox" name="preferencias" id="preferencias" class="form-checkbox">
+                        <label for="preferencias" class="checkbox-label">Viaje sin enlace</label>
+                    </div>
+                </fieldset>
 
-                <p>
-                    <label for="text">Pasajeros-Nin@s:</label>
-                    <input type="number" id="ninos" name="ninos" min="0" max="10" step="1">
-                </p>
-                <p>
-                    <label for="text">Pasajeros-Bebes:</label>
-                    <input type="number" id="bebes" name="bebes" min="0" max="10" step="1">
-                </p>
-                
-              
+                <fieldset class="form-fieldset">
+                    <legend class="fieldset-legend">Viaje accesible</legend>
+                    <div class="checkbox-group">
+                        <input type="checkbox" name="accesible" id="plaza_h" value="plaza_h" class="form-checkbox">
+                        <label for="plaza_h" class="checkbox-label">Plaza H disponible</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" name="accesible" id="asistencia" value="asistencia" class="form-checkbox">
+                        <label for="asistencia" class="checkbox-label">Necesito asistencia</label>
+                    </div>
+                </fieldset>
 
-                <p>Preferencias de viaje</p>
+                <fieldset class="form-fieldset">
+                    <legend class="fieldset-legend">Franja horaria</legend>
+                    <div class="form-row">
+                        <div class="form-group half-width">
+                            <label for="hora_ida" class="form-label">Hora de ida:</label>
+                            <input type="time" id="hora_ida" name="hora_ida" class="form-input" required>
+                        </div>
+                        <div class="form-group half-width">
+                            <label for="hora_vuelta" class="form-label">Hora de vuelta:</label>
+                            <input type="time" id="hora_vuelta" name="hora_vuelta" class="form-input" required>
+                        </div>
+                    </div>
+                    <p class="form-note">Viaje de ida <strong>Salida a partir de las 00:00h</strong></p>
+                    <p class="form-note">Viaje de vuelta <strong>Salida a partir de las 00:00h</strong></p>
+                </fieldset>
 
-                <p>
-                    <label for="preferencias">Viaje sin enlace</label>
-                    <input type="checkbox" name="preferencias" id="preferencias">
-                </p>
-    
-                <p>Viaje accesible</p>
-                <p>
-                    <label for="plaza_h">Plaza H disponible</label>
-                    <input type="checkbox" name="accesible" id="plaza_h" value="plaza_h">
-                </p>
-    
-                <p>
-                    <label for="asistencia">Necesito asistencia</label>
-                    <input type="checkbox" name="accesible" id="asistencia" value="asistencia">
-                </p>
-                
-                <p>Franja horaria</p>
-                <p>
-                    <label for="ida">Viaje de ida</label>
-                    <input type="checkbox" name="viaje1" id="ida" value="ida">
-                </p>
-    
-                <p>
-                    <label for="hora_ida">Hora de ida:</label>
-                    <input type="time" id="hora_ida" name="hora_ida" required>
-                </p>
-    
-                <p>Viaje de ida<strong> Salida a partir de las 00:00h</strong></p>
-    
-                <p>
-                    <label for="vuelta">Viaje de vuelta</label>
-                    <input type="checkbox" name="viaje2" id="vuelta" value="vuelta">
-                </p>
-    
-                
-    
-                <p>
-                    <label for="hora_vuelta">Hora de vuelta:</label>
-                    <input type="time" id="hora_vuelta" name="hora_vuelta" required>
-                </p>
-    
-                <p>Viaje de vuelta<strong> Salida a partir de las 00:00h</strong></p><br>
-                <p><button type="submit">Buscar billete</button></p>
-    
+                <div class="form-submit">
+                    <button type="submit" class="submit-button">Buscar billete</button>
+                </div>
             </form>
         </section>
-
-           
-        </section>
     </main>
-    <aside>
 
-    </aside>
-
-    <footer>
-        <p><h6>&copy; 2025 Renfe - Todos los derechos reservados</h6></p>
+    <footer class="main-footer">
+        <p class="copyright">&copy; 2025 Renfe - Todos los derechos reservados</p>
     </footer>
-
 </body>
 </html>

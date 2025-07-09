@@ -1,106 +1,438 @@
-body {/*Estilos generales del cuerpo del documento */
-    font-family: Arial, sans-serif; /* Fuente principal del documento */
-    background: linear-gradient(to right, #d32e5e, #2a4c87); /* Degradado de colores de fondo */
-    color: white; /* Color del texto en todo el documento */
-    margin: 0; /* Elimina los márgenes predeterminados */
-    padding: 0; /* Elimina los rellenos predeterminados */
-    padding-bottom: 60px; /* Asegura que el contenido no quede cubierto por el footer */
+/* ===== ESTILOS GENERALES ===== */
+/* Estilos base para todo el documento */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #d32e5e, #2a4c87);
+    color: white;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-header {/*Estilos del encabezado */
-    background: #1e1e1e; /* Color de fondo oscuro para el encabezado */
-    padding: 15px; /* Espaciado interno del encabezado */
-    text-align: center; /* Centra el contenido del encabezado */
+/* ===== CABECERA ===== */
+/* Estilos para la cabecera de la página */
+.main-header {
+    background: #1e1e1e;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-h1 {/* Estilos del título principal */
-    font-size: 24px; /* Tamaño de la fuente del título principal */
-    margin: 0; /* Elimina márgenes para un mejor ajuste */
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-nav {/* Estilos de la barra de navegación */
-    display: flex; /* Usa flexbox para organizar elementos */
-    justify-content: center; /* Centra los enlaces de navegación */
-    margin-top: 10px; /* Agrega margen superior */
+.logo {
+    font-size: 2rem;
+    margin: 0;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-nav a {/* Estilos de los enlaces de navegación */
-    color: white; /* Color del texto de los enlaces */
-    text-decoration: none; /* Elimina el subrayado predeterminado */
-    margin: 0 15px; /* Espaciado horizontal entre enlaces */
-    font-weight: bold; /* Hace que los enlaces sean negrita */
+/* ===== NAVEGACIÓN ===== */
+/* Estilos para la barra de navegación */
+.main-nav {
+    margin-top: 1rem;
 }
 
-nav a:hover {/* Estilos al pasar el cursor sobre los enlaces */
-    text-decoration: underline; /* Agrega subrayado al pasar el cursor */
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1.5rem;
 }
 
-main {/* Estilos de la sección principal */
-    display: flex; /* Usa flexbox para organizar el contenido */
-    justify-content: center; /* Centra el contenido principal */
-    padding: 20px; /* Espaciado interno */
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
 }
 
-#formularios1 {/* Estilos del formulario */
-    background: #222; /* Fondo oscuro para el formulario */
-    padding: 20px; /* Espaciado interno para mejor apariencia */
-    border-radius: 10px; /* Bordes redondeados para suavizar el diseño */
-    width: 40%; /* Ancho del formulario como porcentaje de la pantalla */
-    margin: 10px; /* Espaciado externo */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para darle efecto elevado */
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    text-decoration: underline;
 }
 
-form p, label {/* Estilos de etiquetas y párrafos dentro del formulario */
-    font-size: 14px; /* Tamaño del texto de etiquetas y párrafos */
-    margin: 10px 0; /* Espaciado entre elementos del formulario */
+/* ===== CONTENIDO PRINCIPAL ===== */
+/* Estilos para el área de contenido principal */
+.main-content {
+    flex: 1;
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
 }
 
-select, input {/*Estilos de los campos de formulario */
-    width: 100%; /* Hace que los inputs ocupen todo el ancho disponible */
-    padding: 10px; /* Espaciado interno para mejorar usabilidad */
-    margin-top: 5px; /* Espaciado superior para separación visual */
-    border-radius: 5px; /* Bordes redondeados */
-    border: 1px solid #444; /* Borde sutil para mejor apariencia */
-    background: #333; /* Fondo oscuro para los inputs */
-    color: white; /* Color del texto dentro del input */
-    outline: none; /* Elimina borde resaltado predeterminado */
-    transition: border-color 0.3s, box-shadow 0.3s; /* Agrega animación al enfoque */
+.section-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: white;
+    font-size: 1.8rem;
 }
 
-select:focus, input:focus {/* Estilos al enfocar los campos */
-    border-color: #d32e5e; /* Color del borde al enfocar el campo */
-    box-shadow: 0 0 5px rgba(211, 46, 94, 0.5); /* Resalta el campo al enfocarlo */
+.booking-section {
+    background: #222;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-label {/* Estilos de las etiquetas */
-    display: flex; /* Usa flexbox para alinear los elementos */
-    align-items: center; /* Asegura que el texto y el checkbox estén alineados */
-    gap: 5px; /* Espacio entre checkbox y texto */
+/* ===== FORMULARIO ===== */
+/* Estilos para el formulario de reserva */
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
-button {/* Estilos del botón */
-    background: #d32e5e; /* Color de fondo del botón */
-    color: white; /* Color del texto del botón */
-    border: none; /* Elimina bordes */
-    padding: 12px; /* Espaciado interno para mejor usabilidad */
-    font-size: 16px; /* Tamaño de la fuente del botón */
-    border-radius: 5px; /* Bordes redondeados */
-    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-    transition: background 0.3s, transform 0.2s; /* Agrega animación */
-    width: 100%; /* Hace que el botón ocupe el ancho completo */
-    text-align: center; /* Centra el texto del botón */
+.form-group {
+    margin-bottom: 1rem;
 }
 
-button:hover {/** Efecto al pasar el cursor sobre el botón */
-    background: #b1254d; /* Cambio de color al pasar el cursor */
-    transform: scale(1.05); /* Efecto de agrandamiento al pasar el cursor */
+.form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+    color: #f0f0f0;
 }
 
-footer {/* Estilos del pie de página */
-    text-align: center; /* Centra el contenido del pie de página */
-    padding: 10px; /* Espaciado interno */
-    background: #1e1e1e; /* Color de fondo del footer */
-    width: 100%; /* Ancho completo */
-    position: relative; /* Mantiene el footer en la parte inferior */
-    bottom: 0; /* Lo mantiene en la parte más baja */
+.form-select, .form-input {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background: #333;
+    color: white;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-select:focus, .form-input:focus {
+    border-color: #d32e5e;
+    box-shadow: 0 0 0 3px rgba(211, 46, 94, 0.3);
+    outline: none;
+}
+
+/* Estilos para filas y columnas del formulario */
+.form-row {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.half-width {
+    flex: 1 1 calc(50% - 0.5rem);
+}
+
+.third-width {
+    flex: 1 1 calc(33.333% - 0.666rem);
+}
+
+/* Estilos para fieldset y leyendas */
+.form-fieldset {
+    border: 1px solid #444;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-top: 1rem;
+}
+
+.fieldset-legend {
+    padding: 0 0.5rem;
+    font-weight: bold;
+    color: #f0f0f0;
+    font-size: 1.1rem;
+}
+
+/* Estilos para checkboxes */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.form-checkbox {
+    margin-right: 0.5rem;
+    width: 1.1rem;
+    height: 1.1rem;
+}
+
+.checkbox-label {
+    font-size: 0.95rem;
+    color: #f0f0f0;
+}
+
+/* Estilos para notas del formulario */
+.form-note {
+    font-size: 0.85rem;
+    color: #ccc;
+    margin: 0.5rem 0;
+}
+
+/* ===== BOTÓN DE ENVÍO ===== */
+/* Estilos para el botón de enviar */
+.form-submit {
+    margin-top: 1.5rem;
+}
+
+.submit-button {
+    background: #d32e5e;
+    color: white;
+    border: none;
+    padding: 1rem;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.submit-button:hover {
+    background: #b1254d;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== PIE DE PÁGINA ===== */
+/* Estilos para el pie de página */
+.main-footer {
+    background: #1e1e1e;
+    padding: 1.5rem;
+    text-align: center;
+    margin-top: auto;
+}
+
+.copyright {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+/* ===== ESTRATEGIA RESPONSIVE: MOBILE-FIRST ===== */
+/* Pequeñas tablets y móviles grandes (481px a 768px) */
+@media (min-width: 481px) {
+    body {
+        font-size: 1.02rem;
+    }
+    
+    .booking-section {
+        padding: 1.8rem;
+    }
+    
+    .form-row {
+        flex-direction: row;
+    }
+    
+    .half-width {
+        flex: 1 1 calc(50% - 0.5rem);
+    }
+    
+    .third-width {
+        flex: 1 1 calc(50% - 0.5rem); /* 2 columnas en esta resolución */
+    }
+    
+    .submit-button {
+        padding: 1.1rem;
+    }
+}
+
+/* Tablets medianas y pequeñas laptops (769px a 1024px) */
+@media (min-width: 769px) {
+    body {
+        font-size: 1.05rem;
+    }
+    
+    .header-content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .main-nav {
+        margin-top: 0;
+    }
+    
+    .booking-section {
+        max-width: 700px;
+        padding: 2.2rem;
+    }
+    
+    .third-width {
+        flex: 1 1 calc(33.333% - 0.666rem); /* 3 columnas ahora */
+    }
+    
+    .form-fieldset {
+        padding: 1.8rem;
+    }
+}
+
+/* Laptops y desktops (1025px a 1440px) */
+@media (min-width: 1025px) {
+    body {
+        font-size: 1.08rem;
+    }
+    
+    .booking-section {
+        max-width: 800px;
+        padding: 2.5rem;
+    }
+    
+    .form-label, 
+    .checkbox-label {
+        font-size: 1rem;
+    }
+    
+    .submit-button {
+        font-size: 1.15rem;
+        max-width: 80%;
+        margin: 0 auto;
+    }
+}
+
+/* Pantallas grandes (1441px a 1920px) */
+@media (min-width: 1441px) {
+    body {
+        font-size: 1.1rem;
+    }
+    
+    .header-content,
+    .main-content {
+        max-width: 1400px;
+    }
+    
+    .booking-section {
+        max-width: 900px;
+    }
+    
+    .form-row {
+        gap: 1.5rem;
+    }
+}
+
+/* Pantallas extra grandes (1921px a 2560px) */
+@media (min-width: 1921px) {
+    body {
+        font-size: 1.15rem;
+    }
+    
+    .header-content,
+    .main-content {
+        max-width: 1600px;
+    }
+    
+    .booking-section {
+        max-width: 1000px;
+        padding: 3rem;
+    }
+    
+    .form-select,
+    .form-input {
+        padding: 1rem;
+    }
+}
+
+/* Pantallas 4K (2561px en adelante) */
+@media (min-width: 2561px) {
+    body {
+        font-size: 1.25rem;
+        line-height: 1.8;
+    }
+    
+    .header-content,
+    .main-content {
+        max-width: 2000px;
+    }
+    
+    .logo {
+        font-size: 2.5rem;
+    }
+    
+    .nav-link {
+        font-size: 1.2rem;
+        padding: 0.8rem 1.5rem;
+    }
+    
+    .booking-section {
+        max-width: 1200px;
+        padding: 3.5rem;
+    }
+    
+    .form-select,
+    .form-input {
+        padding: 1.2rem;
+        font-size: 1.1rem;
+    }
+    
+    .submit-button {
+        font-size: 1.3rem;
+        padding: 1.3rem;
+        max-width: 70%;
+    }
+}
+
+/* ===== AJUSTES ESPECIALES ===== */
+
+/* Orientación horizontal en móviles */
+@media (max-height: 480px) and (orientation: landscape) {
+    .main-content {
+        padding: 1rem;
+    }
+    
+    .booking-section {
+        padding: 1.5rem;
+        max-width: 90%;
+    }
+    
+    .form-row {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .half-width {
+        flex: 1 1 calc(50% - 0.5rem);
+    }
+    
+    .third-width {
+        flex: 1 1 calc(50% - 0.5rem);
+    }
+}
+
+/* Pantallas altas (mayor relación de aspecto) */
+@media (min-aspect-ratio: 16/9) {
+    .main-content {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+}
+
+/* Ajustes para impresión */
+@media print {
+    body {
+        background: white !important;
+        color: black !important;
+    }
+    
+    .booking-section {
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+    
+    .submit-button {
+        display: none;
+    }
 }
